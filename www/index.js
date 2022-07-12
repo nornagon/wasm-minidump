@@ -5,9 +5,9 @@ document.documentElement.addEventListener('drop', (e) => {
   const item = e.dataTransfer.items[0]
   const file = item.getAsFile()
   const reader = new FileReader
-  reader.onload = () => {
+  reader.onload = async () => {
     const arr = new Uint8Array(reader.result)
-    document.body.textContent = wasm.parse(new Uint8Array(arr));
+    document.body.textContent = await wasm.parse(new Uint8Array(arr));
   }
   reader.readAsArrayBuffer(file)
 })

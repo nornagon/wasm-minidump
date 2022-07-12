@@ -29,6 +29,23 @@ wee_alloc = { version = "0.4.5", optional = true }
 minidump-processor = "0.3.0"
 minidump = "0.3.0"
 minidump-common = "0.3.0"
+breakpad-symbols = "0.3.0"
+
+wasm-bindgen-futures = "0.4.24"
+js-sys = "0.3.51"
+async-trait = "0.1.50"
+
+[dependencies.web-sys]
+version = "0.3.4"
+features = [
+  'Headers',
+  'Request',
+  'RequestInit',
+  'RequestMode',
+  'RequestCache',
+  'Response',
+  'Window',
+]
 
 [dev-dependencies]
 wasm-bindgen-test = "0.3.13"
@@ -40,3 +57,4 @@ opt-level = "s"
 [patch.crates-io]
 minidump = { path = "../rust-minidump/minidump" }
 minidump-processor = { path = "../rust-minidump/minidump-processor" }
+breakpad-symbols = { path = "../rust-minidump/breakpad-symbols" }
